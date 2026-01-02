@@ -121,15 +121,19 @@
   border: 1px solid #e4e4e4;
   border-radius: 14px;
   background: #fff;
+  overflow: hidden;            
 }
 
 .client-carousel .carousel-item {
-  height: 180px;                 /* consistent slide height */
+  height: 180px;
   display: flex;
+  flex-direction: column;      /* KEY FIX */
   align-items: center;
   justify-content: center;
+  gap: 10px;                   /* space between logo + caption */
   padding: 18px;
 }
+
 
 .client-carousel .carousel-item img {
   max-height: 110px;
@@ -175,7 +179,6 @@
 
   <h2>Clients</h2>
 
-  <h2>Clients</h2>
 
 <div id="clientCarousel" class="carousel slide client-carousel" data-bs-ride="carousel" data-bs-interval="2500">
   <div class="carousel-indicators">
