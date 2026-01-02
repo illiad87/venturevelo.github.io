@@ -164,6 +164,57 @@
 .client-carousel .carousel-control-next-icon {
   filter: invert(1);
 }
+.tools-carousel{
+  margin: 18px 0 10px;
+  overflow: hidden;
+  border: 1px solid #e4e4e4;
+  border-radius: 14px;
+  background: #fff;
+  padding: 16px 0;
+  position: relative;
+}
+
+.tools-track{
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: toolsScroll 22s linear infinite;
+}
+
+.tools-group{
+  display: flex;
+  align-items: center;
+}
+
+.tools-group img{
+  height: 52px;
+  width: auto;
+  margin: 0 34px;
+  filter: grayscale(100%);
+  opacity: 0.78;
+  transition: filter 160ms ease, opacity 160ms ease, transform 160ms ease;
+}
+
+.tools-group img:hover{
+  filter: none;
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* Pause on hover */
+.tools-carousel:hover .tools-track{
+  animation-play-state: paused;
+}
+
+@keyframes toolsScroll{
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .tools-track{ animation: none; }
+}
 </style>
 </head>
 <body>
@@ -195,23 +246,23 @@
 
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="assets/images/toyota.png" alt="Toyota logo">
+      <img src="assets/images/toyotaNew.png" alt="Toyota logo">
       <div class="client-caption">
-        <h5>Predictive sales models</h5>
+        <h3>Predictive sales models</h3>
       </div>
     </div>
 
     <div class="carousel-item">
       <img src="assets/images/yeti.jpg" alt="Yeti logo">
       <div class="client-caption">
-        <h5>Ticket-ordering chatbot</h5>
+        <h3>Ticket-ordering chatbot</h3>
       </div>
     </div>
 
     <div class="carousel-item">
       <img src="assets/images/ather.png" alt="Ather Energy Nepal logo">
       <div class="client-caption">
-        <h5>Sales onboarding knowledge base</h5>
+        <h3>Sales onboarding knowledge base</h3>
       </div>
     </div>
   </div>
@@ -270,6 +321,33 @@
       <p><b>Role:</b> Owned data analysis, visualization, and executive-ready reporting.</p>
     </div>
   </div>
+
+<h2>Our Stack</h2>
+
+<div class="tools-carousel" aria-label="Tools used by Venture Velo">
+  <div class="tools-track">
+    <div class="tools-group">
+      <img src="assets/tools/pytorch.png" alt="PyTorch">
+      <img src="assets/tools/voiceflow.png" alt="Voiceflow">
+      <img src="assets/tools/openai.png" alt="OpenAI">
+      <img src="assets/tools/react.jpg" alt="react">
+      <img src="assets/tools/aws.png" alt="aws">
+      <img src="assets/tools/mongodb.png" alt="mongodb">
+    </div>
+
+    <!-- Duplicate group for seamless loop -->
+    <div class="tools-group" aria-hidden="true">
+      <img src="assets/tools/pytorch.png" alt="">
+      <img src="assets/tools/voiceflow.png" alt="">
+      <img src="assets/tools/openai.png" alt="">
+      <img src="assets/tools/react.jpg" alt="react">
+      <img src="assets/tools/aws.png" alt="aws">
+      <img src="assets/tools/mongodb.png" alt="mongodb">
+    </div>
+  </div>
+</div>
+
+
 
   <h2>How We Work</h2>
   <ol>
