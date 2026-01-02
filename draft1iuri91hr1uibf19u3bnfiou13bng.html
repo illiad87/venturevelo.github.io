@@ -126,13 +126,21 @@
 
 .client-carousel .carousel-item {
   height: 180px;
-  display: flex;
-  flex-direction: column;      /* KEY FIX */
+  padding: 18px;
+  text-align: center;
+  display: none;               
+}
+
+.client-carousel .carousel-item.active,
+.client-carousel .carousel-item-next,
+.client-carousel .carousel-item-prev {
+  display: flex;                 
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;                   /* space between logo + caption */
-  padding: 18px;
+  gap: 10px;
 }
+
 
 
 .client-carousel .carousel-item img {
