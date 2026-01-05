@@ -253,6 +253,13 @@
   transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
+.team-card .linkedin-badge img{
+  width: 22px !important;
+  height: 22px !important;
+  object-fit: contain;
+}
+
+
 .social-link img:hover {
   opacity: 1;
   transform: translateY(-2px);
@@ -310,11 +317,12 @@
 
 .team-card img{
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  object-position: center 20%;
+  height: 220px;        /* adjust 200–260 to taste */
+  object-fit: cover;    /* fills, no weird letterboxing */
+  object-position: center;
   display: block;
 }
+
 
 
 .team-card .card-body{
