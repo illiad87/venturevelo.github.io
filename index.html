@@ -310,11 +310,13 @@
 
 .team-card img{
   width:100%;
-  height:180px; 
-  object-fit:cover;
-  object-position: center top; 
+  height:180px;      
+  object-fit: contain;  
+  background: #f4f4f4;   
   display:block;
+  padding:12px;
 }
+
 
 .team-card .card-body{
   padding:18px;
@@ -330,6 +332,29 @@
   font-size:0.95rem;
   color:#555;
 }
+
+.team-card{
+  position: relative;
+}
+
+.team-card .linkedin-badge{
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+}
+
+.team-card .linkedin-badge img{
+  width: 26px;
+  height: 26px;
+  opacity: 0.9;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.team-card .linkedin-badge img:hover{
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
 
 </style>
 </head>
@@ -462,6 +487,12 @@
       <h4>Pavlo Denisov</h4>
       <p>Founder and Product Lead. Leads system architecture, client discovery, and solution design across projects. Sophomore at UT Austin: McCombs School of Business.</p>
     </div>
+    <a href="https://www.linkedin.com/in/pavlodenisov/"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="linkedin-badge">
+    <img src="assets/icons/linkedin.png" alt="Pavlo Denisov on LinkedIn">
+  </a>
   </div>
 
   <div class="card team-card">
@@ -471,6 +502,12 @@
       <p>Co-founder and Machine Learning Engineer. Leads tech department including chatbot development, web-development, and model training & deployment. Senior at Collège du Léman International School.</p>
     </div>
   </div>
+  <a href="https://www.linkedin.com/in/illia-denisov-1377192a1/"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="linkedin-badge">
+    <img src="assets/icons/linkedin.png" alt="Illia Denisov on LinkedIn">
+  </a>
 
 </div>
 
