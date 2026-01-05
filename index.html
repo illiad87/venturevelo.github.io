@@ -320,11 +320,11 @@
 /* ONLY the main portrait (first img in the card) */
 .team-card > img{
   width: 100%;
-  height: 240px;
+  height: clamp(220px, 24vw, 320px); /* taller = less “zoomed” feel */
   display: block;
 
-  object-fit: cover;         /* fills the whole area */
-  object-position: center 20%; /* keeps faces better */
+  object-fit: cover;                 /* fills like case cards */
+  object-position: center 22%;       /* move crop up a bit (faces look better) */
   background: #f4f4f4;
 }
 
