@@ -239,9 +239,12 @@
 .social-link img{
   width: 36px;
   height: 36px;
+  object-fit: contain;
+  display: block;
   opacity: 0.85;
   transition: opacity 0.15s ease, transform 0.15s ease;
 }
+
 
 .social-link img:hover{
   opacity: 1;
@@ -382,7 +385,7 @@
 
 
 
-<h2>How We Work</h2>
+<h2 style="margin-bottom: 12px;">How We Work</h2>
 
 <div class="accordion" id="howWeWorkAccordion">
   <div class="accordion-item">
@@ -437,7 +440,9 @@
       <img style="margin-top:8px" src="assets/icons/linkedin.png" alt="Venture Velo on LinkedIn">
     </a>
 
-    <a href="mailto:venturevelo3@gmail.com"
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=venturevelo3@gmail.com"
+     target="_blank"
+     rel="noopener noreferrer"
      class="social-link">
     <img src="assets/icons/gmail.jpg" alt="Email Venture Velo">
   </a>
